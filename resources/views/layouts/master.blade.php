@@ -54,13 +54,6 @@
 </head>
 
 <body>
-    <div>
-        <form id="test" method="POST" action="/post/22">
-            @csrf
-            @method('DELETE')
-            <button type="submit">Test</button>
-        </form>
-    </div>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -141,40 +134,40 @@
                 });
         })
 
-        $('#editPost').submit((e)=>{
+        // $('#editPost').submit((e)=>{
           
 
-            let data = $('#editForm').serialize();
-            e.preventDefault();
-            $.ajax({
-               method: 'post',
-               url: '/update',
-               data: data 
-            })
-                .then( res => {
-                    console.log(res);
-                })
-                .catch( err => {
-                    console.log(err);
-                });
+        //     let data = $('#editForm').serialize();
+        //     e.preventDefault();
+        //     $.ajax({
+        //        method: 'POST',
+        //        url: '/POST/22',
+        //        data: data 
+        //     })
+        //         .then( res => {
+        //             console.log(res);
+        //         })
+        //         .catch( err => {
+        //             console.log(err);
+        //         });
 
-            let panelID = '#post_' + postID.value;
+        //     let panelID = '#post_' + postID.value;
             
-            let date = new Date();
-            let dateFormat = 
-                date.getFullYear() + '-' +
-                (date.getMonth() + 1) + '-' +
-                date.getDate() + ' ' +
-                date.getHours() + ':' +
-                date.getMinutes() + ':' +
-                date.getSeconds()
+        //     let date = new Date();
+        //     let dateFormat = 
+        //         date.getFullYear() + '-' +
+        //         (date.getMonth() + 1) + '-' +
+        //         date.getDate() + ' ' +
+        //         date.getHours() + ':' +
+        //         date.getMinutes() + ':' +
+        //         date.getSeconds()
 
-            $(panelID + ' .panel-heading b').text(editTitle.value);
-            $(panelID + ' .panel-heading span').text(dateFormat);
-            $(panelID + ' .panel-body').text(editContent.value);
+        //     $(panelID + ' .panel-heading b').text(editTitle.value);
+        //     $(panelID + ' .panel-heading span').text(dateFormat);
+        //     $(panelID + ' .panel-body').text(editContent.value);
 
-            $('#editPost').modal('toggle');
-        });
+        //     $('#editPost').modal('toggle');
+        // });
 
         $('.panel-body, .panel-footer').toggle();
 

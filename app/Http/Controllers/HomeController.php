@@ -52,14 +52,4 @@ class HomeController extends Controller
         return redirect('/');        
     }
 
-    public function update(Request $request){
-        date_default_timezone_set('Asia/Taipei');
-        
-        $post = Post::find($request->postID);
-        $post->title = $request->editTitle;
-        $post->content = $request->editContent;
-        $post->save();
-
-        return redirect('/');
-    }
 }

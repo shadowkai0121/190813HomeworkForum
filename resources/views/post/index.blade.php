@@ -40,5 +40,5 @@
 </div> 
 @endforeach
 
-@include('partials.editpost');
+@include('partials.editpost', [ 'postID' => $post->id ]);
 @endsection

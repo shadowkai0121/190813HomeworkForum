@@ -8,8 +8,9 @@
 @overwrite
 
 @section('modalBody')
-<form id="editForm" class="form-horizontal" method="POST" action="" data-ajax='false'>
+<form id="editForm" class="form-horizontal" method="POST" action="/post/{{ $postID }}" data-ajax='false'>
     @csrf
+    @method('PUT')
     <input id="postID" name='postID' type="text" value="" hidden>
     <div class="modal-body">
         <div class="form-group">
