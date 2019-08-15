@@ -70,12 +70,14 @@
                 <li class="active"><a href="#">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" id="btnNewPost">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                        Post
-                    </a>
-                </li>
+                @if($user)
+                    <li>
+                        <a href="#" id="btnNewPost">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            Post
+                        </a>
+                    </li>
+                @endif
                 <li>
                     @if($user)
                     <a href="/login" id="btnLogout">
