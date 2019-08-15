@@ -40,5 +40,5 @@
 </div> 
 @endforeach
 
-@include('layouts.editpost');
+@include('partials.editpost');
 @endsection

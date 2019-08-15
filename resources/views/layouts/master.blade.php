@@ -97,9 +97,9 @@
         @yield('content');
     </div>
 
-    @include('layouts.login')
+    @include('partials.login')
 
-    @include('layouts.newpost')
+    @include('partials.newpost')
 
     <script>
 
